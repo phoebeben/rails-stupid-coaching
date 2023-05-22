@@ -5,12 +5,13 @@ class QuestionsController < ApplicationController
   def answer
     @question = params[:answer]
 
-    if @question == 'I am going to work'
-      @answer = 'Great!'
-    elsif @question.include?('?')
-      @answer = 'Silly question, get dressed and go to work!'
-    else
-      @answer = "I don't care, get dressed and go to work!"
-    end
+    @answer =
+      if @question.downcase == 'i am going to work'
+        'Great!'
+      elsif @question.include?('?')
+        'Silly question, get dressed and go to work!'
+      else
+        "I don't care, get dressed and go to work!"
+      end
   end
 end
