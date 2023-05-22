@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ div {
+  border-left: 5px solid rgb(203, 199, 199);
+ }
